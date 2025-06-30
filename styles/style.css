@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -50,12 +53,6 @@ ol {
   background-color: #D9D9D9;
 }
 
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .content {
   display: flex;
   justify-content: center;
@@ -69,10 +66,6 @@ ol {
   width: 711px;
   height: 386px;
   margin-bottom: 16px;
-}
-
-.preloader-template {
-  position: absolute;
 }
 
 .result__video {
@@ -132,7 +125,7 @@ ol {
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
-  background-color: #1b1919;
+  background-color: transparent;
   appearance: none;
 }
 
@@ -148,11 +141,6 @@ ol {
 
 .search-form__label:has(.search-form__textfield:focus), .search-form__label:has(.search-form__textfield:active:focus-visible) {
   outline: none;
-}
-
-.search-form__label:has(.search-form__textfield:focus-visible) {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
 }
 
 .search-form__pseudo-checkbox {
@@ -184,7 +172,7 @@ ol {
   outline: none;
 }
 
-.search-form__label:has(.search-form__checkbox:focus-visible) {
+.search-form__label:has(.search-form__checkbox:focus-visible), .search-form__label:has(.search-form__textfield:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
@@ -235,12 +223,12 @@ button:active {
 }
 
 .title {
-  padding-bottom: 26px;
+  padding-bottom: 22px;
   color: #fff;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 75px;
-  line-height: 94%;
+  line-height: 96%;
   text-transform: uppercase;
 }
 
@@ -268,7 +256,6 @@ button:active {
 
 .content__card-link {
   display: block;
-  margin: 3px;
   color: #fff;
   text-decoration: none;
   cursor: pointer;
@@ -288,6 +275,7 @@ button:active {
 }
 
 .content__card-link:focus-visible {
+  margin: 3px;
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
@@ -303,6 +291,7 @@ button:active {
 
 .content__video-card-title {
   max-width: 196px;
+  padding-bottom: 6px;
   overflow: hidden;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
@@ -320,7 +309,7 @@ button:active {
   font-size: 18px;
   line-height: 16.2px;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
 }
 
 .content__video-card-thumbnail {
